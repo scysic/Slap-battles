@@ -82,10 +82,9 @@ if teleportFunc then
     ]])
 end
 game:GetService("TeleportService"):Teleport(9020359053)
-                    end    
-                
-end})
-}
+                     
+                end})
+
 
 Tabs.Home:AddButton({
         Title = "View Slap Royal Testing Server",
