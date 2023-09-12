@@ -1,1 +1,63 @@
---//hello people
+    loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()    
+    local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()    
+    local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()    
+  
+    local Window = Fluent:CreateWindow({    
+        Title = "Rusty sb" .. Fluent.Version,    
+        SubTitle = "Slap Battles",    
+        TabWidth = 160,    
+        Size = UDim2.fromOffset(450, 260),    
+        Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely    
+        Theme = "Darker",    
+        MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind    
+    })    
+  
+    --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional    
+    local Tabs = {    
+        Home = Window:AddTab({ Title = "home", Icon = "codesandbox" }),      
+ Combat = Window:AddTab({ Title = "combat", Icon = "fan" }), 
+ Antis = Window:AddTab({ Title = "antis", Icon = "shield" }) 
+    }    
+  
+    local Options = Fluent.Options    
+  
+    do  
+     Fluent:Notify({    
+         Title = "Game Detected",    
+         Content = "This game is supported",    
+         SubContent = "B)", -- Optional    
+         Duration = 5 -- Set to nil to make the notification not disappear    
+     })   
+
+Tabs.Main:AddParagraph({
+        Title = "Paragraph",
+        Content = "This is a paragraph.\nSecond line!"
+    })
+
+
+
+    Tabs.Main:AddButton({
+        Title = "Infinite Yield",
+        Description = "Executes IY Admin",
+        Callback = function()
+            Window:Dialog({
+                Title = "Infinite Yield",
+                Content = "Executes Infinite Yield Admin Cmds",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Infinite%20Yield%20but%20with%20secure%20dex'))()
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
