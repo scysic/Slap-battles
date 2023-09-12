@@ -16,7 +16,8 @@
     local Tabs = {    
         Home = Window:AddTab({ Title = "home", Icon = "codesandbox" }),      
  Combat = Window:AddTab({ Title = "combat", Icon = "fan" }), 
- Antis = Window:AddTab({ Title = "antis", Icon = "shield" }) 
+ Antis = Window:AddTab({ Title = "antis", Icon = "shield" }),
+Misc = Window:AddTab({ Title = "misc", Icon = "" }) 
     }    
   
     local Options = Fluent.Options    
@@ -106,7 +107,7 @@ if teleportFunc then
 end
 game:GetService("TeleportService"):Teleport(9020359053)
                     end    
-                })
+                
 end})
 
 Tabs.Home:AddButton({
@@ -127,5 +128,13 @@ if teleportFunc then
 end
 game:GetService("TeleportService"):Teleport(9412268818)
                     end    
-                })
+             
+end})
+
+Tabs.Misc:AddButton({
+        Title = "Slap Farm",
+        Description = "Slap farm",
+        Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Farm'))()
+                    end
 end})
