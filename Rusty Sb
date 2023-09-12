@@ -111,8 +111,7 @@ Tabs.Misc:AddButton({
         Description = "Slap farm",
         Callback = function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Farm'))()
-                    end
-end})
+                    end})
 
 local Toggle = Tabs.Combat:AddToggle("Slap Aura", {Title = "Slap Aura", Default = false })
 
