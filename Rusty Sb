@@ -109,3 +109,23 @@ game:GetService("TeleportService"):Teleport(9020359053)
                 })
 end})
 
+Tabs.Home:AddButton({
+        Title = "View Slap Royal Testing Server",
+        Description = "tp to sr test server",
+        Callback = function()
+local teleportFunc = queueonteleport or queue_on_teleport or syn and syn.queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+        repeat wait() until game.Players.LocalPlayer
+        game:GetService("RunService").RenderStepped:Connect(function()
+            game:GetService("GuiService"):ClearError()
+        end)
+    ]])
+end
+game:GetService("TeleportService"):Teleport(9412268818)
+                    end    
+                })
+end})
