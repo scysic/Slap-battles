@@ -103,9 +103,8 @@ if teleportFunc then
     ]])
 end
 game:GetService("TeleportService"):Teleport(9412268818)
-                    end    
-             
-end})
+                     
+             end})
 
 Tabs.Misc:AddButton({
         Title = "Slap Farm",
