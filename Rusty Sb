@@ -61,3 +61,30 @@ Tabs.Main:AddParagraph({
         end
     })
 
+
+Tabs.Main:AddButton({
+        Title = "Rejoin",
+        Description = "Rejoins the Server",
+        Callback = function()
+            Window:Dialog({
+                Title = "Rejoin Server",
+                Content = "Rejoin Server",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
+  	end
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
