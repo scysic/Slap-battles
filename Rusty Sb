@@ -30,13 +30,13 @@
      })   
 
 Tabs.Main:AddParagraph({
-        Title = "Paragraph",
-        Content = "This is a paragraph.\nSecond line!"
+        Title = "Home Tab",
+        Content = "Hello, this is the home tab"
     })
 
 
 
-    Tabs.Main:AddButton({
+    Tabs.Home:AddButton({
         Title = "Infinite Yield",
         Description = "Executes IY Admin",
         Callback = function()
@@ -62,7 +62,7 @@ Tabs.Main:AddParagraph({
     })
 
 
-Tabs.Main:AddButton({
+Tabs.Home:AddButton({
         Title = "Rejoin",
         Description = "Rejoins the Server",
         Callback = function()
@@ -87,4 +87,25 @@ Tabs.Main:AddButton({
             })
         end
     })
+
+Tabs.Home:AddButton({
+        Title = "View Testing Server",
+        Description = "Views Testing Servers",
+        Callback = function()
+local teleportFunc = queueonteleport or queue_on_teleport or syn and syn.queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+        repeat wait() until game.Players.LocalPlayer
+        game:GetService("RunService").RenderStepped:Connect(function()
+            game:GetService("GuiService"):ClearError()
+        end)
+    ]])
+end
+game:GetService("TeleportService"):Teleport(9020359053)
+                    end    
+                })
+end})
 
