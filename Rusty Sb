@@ -76,6 +76,7 @@ Tabs.Home:AddButton({
                         Callback = function()
                             game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
   	end
+       }
                         end
                     },
                     {
