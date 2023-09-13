@@ -215,7 +215,7 @@ local Toggle = Tabs.Combat:AddToggle("MyToggle", {Title = "Slap Aura", Default =
                                 while RhythmSpam do
                                     game:GetService("ReplicatedStorage").rhythmevent:FireServer("AoeExplosion",0)
                                     task.wait()
-                                    end, Options.RhythmSpam.Value)
+                                    end Options.RhythmSpam.Value)
                             
                             Options.RhythmSpam:SetValue(false)
                             
