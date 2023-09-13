@@ -170,7 +170,7 @@ end
         end
 task.wait()
 end
-end)
+)
 
 Options.SlapAura:SetValue(false)
     
@@ -218,7 +218,7 @@ Options.SlapAura:SetValue(false)
         game:GetService("ReplicatedStorage").rhythmevent:FireServer("AoeExplosion",0)
 task.wait()
 end
-                    end)
+                    )
 
                     Options.MyToggle:SetValue(false)
         
