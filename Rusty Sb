@@ -155,7 +155,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmo
                     end})
 
 
-local Toggle = Tabs.Combat:AddToggle("SlapAura", {Title = "Slap Aura", Default = false })
+local Toggle = Tabs.Combat:AddToggle("MyToggle", {Title = "Slap Aura", Default = false })
 
     Toggle:OnChanged(function()
         for i,v in pairs(game.Players:GetChildren()) do
@@ -172,7 +172,7 @@ task.wait()
 end
 )
 
-Options.SlapAura:SetValue(false)
+Options.MyToggle:SetValue(false)
     
                
     
