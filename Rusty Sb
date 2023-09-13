@@ -170,12 +170,13 @@ local Toggle = Tabs.Combat:AddToggle("MyToggle", {Title = "Slap Aura", Default =
             end
                             end
             task.wait()
-            end, Options.MyToggle.Value)
+                        end 
+                    end)
         
     
                
     
-    Options.MyToggle:SetValue(false)
+   
 
     Tabs.Misc:AddButton({
         Title = "GodMode",
@@ -214,10 +215,11 @@ local Toggle = Tabs.Combat:AddToggle("MyToggle", {Title = "Slap Aura", Default =
                                 while RhythmSpam do
                                     game:GetService("ReplicatedStorage").rhythmevent:FireServer("AoeExplosion",0)
                                     task.wait()
-                                    end, Options.MyToggle.Value)
+                                end
+                            end)
                                
                         
-                            Options.MyToggle:SetValue(false)
+                            
 
                             
                         end
