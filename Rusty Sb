@@ -30,7 +30,7 @@ Misc = Window:AddTab({ Title = "misc", Icon = "" })
          Duration = 5 -- Set to nil to make the notification not disappear    
      })   
 
-Tabs.Main:AddParagraph({
+Tabs.Combat:AddParagraph({
         Title = "Home Tab",
         Content = "Hello, this is the home tab"
     })
