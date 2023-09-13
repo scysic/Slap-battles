@@ -209,16 +209,15 @@ local Toggle = Tabs.Combat:AddToggle("MyToggle", {Title = "Slap Aura", Default =
 
     
 
-                            local Toggle = Tabs.Combat:AddToggle("MyToggle", {Title = "Rhythm Explosion Spam (All gloves)", Default = false })
+                            local Toggle = Tabs.Combat:AddToggle("RhythmSpam", {Title = "Rhythm Explosion Spam (All gloves)", Default = false })
 
                             Toggle:OnChanged(function()
                                 while RhythmSpam do
                                     game:GetService("ReplicatedStorage").rhythmevent:FireServer("AoeExplosion",0)
                                     task.wait()
-                                end
-                            end)
-                               
-                        
+                                    end, Options.RhythmSpam.Value)
+                            
+                            Options.MyToggle:SetValue(false)
                             
 
                             
