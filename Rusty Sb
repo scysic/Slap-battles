@@ -155,24 +155,24 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmo
                     end})
 
 
-local Toggle = Tabs.Combat:AddToggle("MyToggle", {Title = "Slap Aura", Default = false })
+local Toggle = Tabs.Combat:AddToggle("SlapAura", {Title = "Slap Aura", Default = false })
 
     Toggle:OnChanged(function()
-        while SlapAura do
-            for i,v in pairs(game.Players:GetChildren()) do
-                                if v ~= game.Players.LocalPlayer and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Character then
-            if v.Character:FindFirstChild("entered") and v.Character:FindFirstChild("HumanoidRootPart") then
-            Magnitude = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).Magnitude
-                                    if 25 >= Magnitude then
-            game.ReplicatedStorage.KSHit:FireServer(v.Character:WaitForChild("HumanoidRootPart"))
-                                end
+        for i,v in pairs(game.Players:GetChildren()) do
+            if v ~= game.Players.LocalPlayer and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Character then
+if v.Character:FindFirstChild("entered") and v.Character:FindFirstChild("HumanoidRootPart") then
+Magnitude = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).Magnitude
+                if 25 >= Magnitude then
+game.ReplicatedStorage.KSHit:FireServer(v.Character:WaitForChild("HumanoidRootPart"))
             end
-            end
-                            end
-            task.wait()
-                        end 
-                    end)
-        
+end
+end
+        end
+task.wait()
+end
+end)
+
+Options.SlapAura:SetValue(false)
     
                
     
@@ -212,20 +212,17 @@ local Toggle = Tabs.Combat:AddToggle("MyToggle", {Title = "Slap Aura", Default =
                             
 
                             
-    local Toggle = Tabs.Combat:AddToggle("RhythmSpam", {Title = "Rhythm Spam", Default = false })
+    local Toggle = Tabs.Combat:AddToggle("MyToggle", {Title = "Rhythm Spam", Default = false })
 
     Toggle:OnChanged(function()
-        RhythmSpam = Value
-while RhythmSpam do
-game:GetService("ReplicatedStorage").rhythmevent:FireServer("AoeExplosion",0)
+        game:GetService("ReplicatedStorage").rhythmevent:FireServer("AoeExplosion",0)
 task.wait()
 end
-    
-                            
+                    end)
 
-                            
-    end)
-                    end
+                    Options.MyToggle:SetValue(false)
+        
+                end
                             
                         
 
