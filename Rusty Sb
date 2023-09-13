@@ -113,10 +113,12 @@ Tabs.Misc:AddButton({
 loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Farm'))()
                     end})
 
-local Toggle = Tabs.Combat:AddToggle("Slap Aura", {Title = "Slap Aura", Default = false })
+
+local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Slap Aura", Default = false })
 
     Toggle:OnChanged(function()
-        while SlapAura do
+    SlapAura = Value
+                while SlapAura do
 for i,v in pairs(game.Players:GetChildren()) do
                     if v ~= game.Players.LocalPlayer and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v.Character then
 if v.Character:FindFirstChild("entered") and v.Character:FindFirstChild("HumanoidRootPart") then
@@ -129,7 +131,8 @@ end
                 end
 task.wait()
 end
+               
     end)
 
-    Options.Slap Aura:SetValue(false)
-
+    Options.MyToggle:SetValue(false)
+        
