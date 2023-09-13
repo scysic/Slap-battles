@@ -217,7 +217,7 @@ local Toggle = Tabs.Combat:AddToggle("MyToggle", {Title = "Slap Aura", Default =
                                     task.wait()
                                     end, Options.RhythmSpam.Value)
                             
-                            Options.MyToggle:SetValue(false)
+                            Options.RhythmSpam:SetValue(false)
                             
 
                             
